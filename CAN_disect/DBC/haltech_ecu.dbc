@@ -1,0 +1,723 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Haltech Telemetry
+
+
+BO_ 864 Haltech_360_Engine_RPM_MAP_TPS: 8 Haltech
+ SG_ CoolantPressure : 55|16@0+ (0.1,-101.3) [0|0] "kPa"  Telemetry
+ SG_ ThrottlePosition : 39|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ ManifoldPressure : 23|16@0+ (0.1,0.0) [0|0] "kPa_abs"  Telemetry
+ SG_ RPM : 7|16@0+ (1,0) [0|0] "RPM"  Telemetry
+
+BO_ 865 Haltech_361_Engine_Pressures: 8 Haltech
+ SG_ WastegatePressure : 55|16@0+ (0.1,-101.3) [0|0] "kPa"  Telemetry
+ SG_ EngineDemand : 39|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ OilPressure : 23|16@0+ (0.1,-101.3) [0|0] "kPa"  Telemetry
+ SG_ FuelPressure : 7|16@0+ (0.1,-101.3) [0|0] "kPa"  Telemetry
+
+BO_ 866 Haltech_362_Engine_Injection_Ign: 8 Haltech
+ SG_ IgnitionAngleLeading : 39|16@0- (0.1,0.0) [0|0] "deg"  Telemetry
+ SG_ InjectionStage2DutyCycle : 23|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ InjectionStage1DutyCycle : 7|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+
+BO_ 867 Haltech_363_Wheel_Slip_Launch: 8 Haltech
+ SG_ LaunchControlEndRPM : 55|16@0+ (1,0) [0|0] "RPM"  Telemetry
+ SG_ WheelDiff : 23|16@0- (0.1,0.0) [0|0] "km/h"  Telemetry
+ SG_ WheelSlip : 7|16@0- (0.1,0.0) [0|0] "km/h"  Telemetry
+
+BO_ 868 Haltech_364_Injection_Times: 8 Haltech
+ SG_ InjectionStage4AvgInjectionTime : 55|16@0+ (0.001,0.0) [0|0] "ms"  Telemetry
+ SG_ InjectionStage3AvgInjectionTime : 39|16@0+ (0.001,0.0) [0|0] "ms"  Telemetry
+ SG_ InjectionStage2AvgInjectionTime : 23|16@0+ (0.001,0.0) [0|0] "ms"  Telemetry
+ SG_ InjectionStage1AvgInjectionTime : 7|16@0+ (0.001,0.0) [0|0] "ms"  Telemetry
+
+BO_ 872 Haltech_368_Wideband_1_4: 8 Haltech
+ SG_ WidebandSensor4 : 55|16@0+ (0.001,0.0) [0|0] "lambda"  Telemetry
+ SG_ WidebandSensor3 : 39|16@0+ (0.001,0.0) [0|0] "lambda"  Telemetry
+ SG_ WidebandSensor2 : 23|16@0+ (0.001,0.0) [0|0] "lambda"  Telemetry
+ SG_ WidebandSensor1 : 7|16@0+ (0.001,0.0) [0|0] "lambda"  Telemetry
+
+BO_ 873 Haltech_369_Trigger_Status: 8 Haltech
+ SG_ TriggerSyncLevel : 55|16@0+ (1,0) [0|0] ""  Telemetry
+ SG_ TriggerCounter : 23|16@0+ (1,0) [0|0] ""  Telemetry
+ SG_ TriggerSystemErrorCount : 7|16@0+ (1,0) [0|0] ""  Telemetry
+
+BO_ 874 Haltech_36A_Knock: 8 Haltech
+ SG_ KnockLevel2 : 23|16@0+ (0.01,0.0) [0|0] "dB"  Telemetry
+ SG_ KnockLevel1 : 7|16@0+ (0.01,0.0) [0|0] "dB"  Telemetry
+
+BO_ 875 Haltech_36B_Brake_NOS_Turbo_LatG: 8 Haltech
+ SG_ LateralG : 55|16@0- (0.1,0.0) [0|0] "m/s2"  Telemetry
+ SG_ TurboSpeedSensor1 : 39|16@0+ (10,0) [0|0] "RPM"  Telemetry
+ SG_ NOSPressureSensor1 : 23|16@0+ (0.22,-101.3) [0|0] "kPa"  Telemetry
+ SG_ BrakePressureFront : 7|16@0+ (1.0,-101.3) [0|0] "kPa"  Telemetry
+
+BO_ 876 Haltech_36C_Wheel_Speeds: 8 Haltech
+ SG_ WheelSpeedRearRight : 55|16@0+ (0.1,0.0) [0|0] "km/h"  Telemetry
+ SG_ WheelSpeedRearLeft : 39|16@0+ (0.1,0.0) [0|0] "km/h"  Telemetry
+ SG_ WheelSpeedFrontRight : 23|16@0+ (0.1,0.0) [0|0] "km/h"  Telemetry
+ SG_ WheelSpeedFrontLeft : 7|16@0+ (0.1,0.0) [0|0] "km/h"  Telemetry
+
+BO_ 877 Haltech_36D_Exhaust_Cam_Angles: 8 Haltech
+ SG_ ExhaustCamAngle2 : 55|16@0- (0.1,0.0) [0|0] "deg"  Telemetry
+ SG_ ExhaustCamAngle1 : 39|16@0- (0.1,0.0) [0|0] "deg"  Telemetry
+
+BO_ 878 Haltech_36E_Limiting_Launch_Long: 8 Haltech
+ SG_ LongitudinalG : 55|16@0- (0.1,0.0) [0|0] "m/s2"  Telemetry
+ SG_ LaunchControlFuelEnrich : 39|16@0- (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ LaunchControlIgnitionRetard : 23|16@0- (0.1,0.0) [0|0] "deg"  Telemetry
+ SG_ EngineLimitingActive : 7|16@0+ (1.0,0.0) [0|0] ""  Telemetry
+
+BO_ 879 Haltech_36F_Generic_Boost_Output: 8 Haltech
+ SG_ BoostControlOutput : 23|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ GenericOutput1DutyCycle : 7|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+
+BO_ 880 Haltech_370_VehicleSpeed_Gear_Ca: 8 Haltech
+ SG_ IntakeCamAngle2 : 55|16@0- (0.1,0.0) [0|0] "deg"  Telemetry
+ SG_ IntakeCamAngle1 : 39|16@0- (0.1,0.0) [0|0] "deg"  Telemetry
+ SG_ Gear : 31|8@0- (1.0,0.0) [0|0] ""  Telemetry
+ SG_ GearSelectorPosition : 23|8@0- (1.0,0.0) [0|0] ""  Telemetry
+ SG_ VehicleSpeed : 7|16@0+ (0.1,0.0) [0|0] "km/h"  Telemetry
+
+BO_ 881 Haltech_371_Fuel_Flow: 8 Haltech
+ SG_ FuelFlowReturn : 23|16@0+ (1,0) [0|0] "cc/min"  Telemetry
+ SG_ FuelFlow : 7|16@0+ (1,0) [0|0] "cc/min"  Telemetry
+
+BO_ 882 Haltech_372_Battery_Boost_Baro: 8 Haltech
+ SG_ BarometricPressure : 55|16@0+ (0.1,0.0) [0|0] "kPa_abs"  Telemetry
+ SG_ TargetBoostLevel : 39|16@0+ (0.1,0.0) [0|0] "kPa"  Telemetry
+ SG_ BatteryVoltage : 7|16@0+ (0.1,0.0) [0|0] "V"  Telemetry
+
+BO_ 883 Haltech_373_EGT_1_4: 8 Haltech
+ SG_ EGTSensor4 : 55|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ EGTSensor3 : 39|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ EGTSensor2 : 23|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ EGTSensor1 : 7|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+
+BO_ 884 Haltech_374_EGT_5_8: 8 Haltech
+ SG_ EGTSensor8 : 55|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ EGTSensor7 : 39|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ EGTSensor6 : 23|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ EGTSensor5 : 7|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+
+BO_ 885 Haltech_375_EGT_9_12: 8 Haltech
+ SG_ EGTSensor12 : 55|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ EGTSensor11 : 39|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ EGTSensor10 : 23|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ EGTSensor9 : 7|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+
+BO_ 886 Haltech_376_Ambient_Humidity: 8 Haltech
+ SG_ AbsoluteHumidity : 55|16@0+ (0.1,0.0) [0|0] "g/m3"  Telemetry
+ SG_ SpecificHumidity : 39|16@0+ (100,0) [0|0] "ppm"  Telemetry
+ SG_ RelativeHumidity : 23|16@0- (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ AmbientAirTemperature : 7|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+
+BO_ 887 Haltech_377_Boost_PreIntercooler: 8 Haltech
+ SG_ BoostPressurePreIntercooler : 7|16@0+ (0.1,0.0) [0|0] "kPa"  Telemetry
+
+BO_ 896 Haltech_380_Generic_Output_Value: 8 Haltech
+ SG_ GenericOutput4Value : 55|16@0+ (1,0) [0|0] ""  Telemetry
+ SG_ GenericOutput3Value : 39|16@0+ (1,0) [0|0] ""  Telemetry
+ SG_ GenericOutput2Value : 23|16@0+ (1,0) [0|0] ""  Telemetry
+ SG_ GenericOutput1Value : 7|16@0+ (1,0) [0|0] ""  Telemetry
+
+BO_ 992 Haltech_3E0_Temps_1: 8 Haltech
+ SG_ OilTemperature : 55|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ FuelTemperature : 39|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ AirTemperature : 23|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ CoolantTemperature : 7|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+
+BO_ 993 Haltech_3E1_Temps_2: 8 Haltech
+ SG_ AirTemperaturePreIntercooler : 55|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ FuelComposition : 39|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ DiffOilTemperature : 23|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ GearboxOilTemperature : 7|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+
+BO_ 994 Haltech_3E2_Fuel_Level_Economy: 8 Haltech
+ SG_ FuelLevel2 : 55|16@0+ (0.1,0.0) [0|0] "L"  Telemetry
+ SG_ AverageFuelConsumptionMileage : 39|16@0+ (0.1,0.0) [0|0] "km/L"  Telemetry
+ SG_ FuelVolumeEstimatedFlow : 23|16@0- (0.1,0.0) [0|0] "cc/min"  Telemetry
+ SG_ FuelLevel : 7|16@0+ (0.1,0.0) [0|0] "L"  Telemetry
+
+BO_ 995 Haltech_3E3_Fuel_Trims: 8 Haltech
+ SG_ FuelTrimLongTermBank2 : 55|16@0- (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ FuelTrimLongTermBank1 : 39|16@0- (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ FuelTrimShortTermBank2 : 23|16@0- (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ FuelTrimShortTermBank1 : 7|16@0- (0.1,0.0) [0|0] "%"  Telemetry
+
+BO_ 996 Haltech_3E4_Switches_Lights_Trim: 8 Haltech
+ SG_ TractionControlLight : 56|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ HandBrakeState : 57|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ BatteryLightActive : 62|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ CheckEngineLight : 63|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ RotaryTrimPot3 : 55|8@0- (1,0) [0|0] ""  Telemetry
+ SG_ RotaryTrimPot2 : 47|8@0- (1,0) [0|0] ""  Telemetry
+ SG_ RotaryTrimPot1 : 39|8@0- (1,0) [0|0] ""  Telemetry
+ SG_ ThermoFan1On : 24|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ ThermoFan2On : 25|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ ThermoFan3On : 26|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ ThermoFan4On : 27|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ AirConOutput : 28|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ AirConRequest : 29|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ TractionControlActive : 30|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ TractionControlEnabled : 31|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ TorqueReductionActive : 17|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ ClutchPressureSensor : 18|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ FlatShiftSwitch : 19|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ BrakeFluidLevelSwitch : 20|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ AuxRPMLimiterActive : 21|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ LaunchControlSwitch : 22|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ LaunchControlActive : 23|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ OilPressureLight : 8|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ ClutchSwitch : 9|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ BrakePedalSwitch : 10|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ TransientThrottleActive : 11|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ DecelCutActive : 12|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ GearSwitch : 13|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ ReverseSwitch : 14|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NeutralSwitch : 15|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+
+BO_ 997 Haltech_3E5_Ignition_PitLimiter_: 8 Haltech
+ SG_ DriveshaftRPM : 55|16@0+ (1,0) [0|0] "RPM"  Telemetry
+ SG_ SteeringWheelAngle : 39|16@0- (0.1,0.0) [0|0] "deg"  Telemetry
+ SG_ ABSArmed : 24|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ ABSActive : 25|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ ABSError : 26|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ PitLaneSpeedLimiterSwitchState : 28|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ PitLaneSpeedLimiterActive : 29|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ PitLaneSpeedLimiterError : 30|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ TurboTimerEngineTimeRemaining : 23|8@0+ (1,0) [0|0] "s"  Telemetry
+ SG_ TurboTimerTimeRemaining : 15|8@0+ (1,0) [0|0] "s"  Telemetry
+ SG_ IgnitionSwitch : 7|8@0+ (1.0,0.0) [0|0] ""  Telemetry
+
+BO_ 998 Haltech_3E6_NOS_2_4_Turbo2: 8 Haltech
+ SG_ TurboSpeedSensor2 : 55|16@0+ (10,0) [0|0] "RPM"  Telemetry
+ SG_ NOSPressureSensor4 : 39|16@0+ (0.22,-101.3) [0|0] "kPa"  Telemetry
+ SG_ NOSPressureSensor3 : 23|16@0+ (0.22,-101.3) [0|0] "kPa"  Telemetry
+ SG_ NOSPressureSensor2 : 7|16@0+ (0.22,-101.3) [0|0] "kPa"  Telemetry
+
+BO_ 999 Haltech_3E7_Generic_Sensors_1_4: 8 Haltech
+ SG_ GenericSensor4 : 55|16@0+ (1,0) [0|0] ""  Telemetry
+ SG_ GenericSensor3 : 39|16@0+ (1,0) [0|0] ""  Telemetry
+ SG_ GenericSensor2 : 23|16@0+ (1,0) [0|0] ""  Telemetry
+ SG_ GenericSensor1 : 7|16@0+ (1,0) [0|0] ""  Telemetry
+
+BO_ 1000 Haltech_3E8_Generic_Sensors_5_8: 8 Haltech
+ SG_ GenericSensor8 : 55|16@0+ (1,0) [0|0] ""  Telemetry
+ SG_ GenericSensor7 : 39|16@0+ (1,0) [0|0] ""  Telemetry
+ SG_ GenericSensor6 : 23|16@0+ (1,0) [0|0] ""  Telemetry
+ SG_ GenericSensor5 : 7|16@0+ (1,0) [0|0] ""  Telemetry
+
+BO_ 1001 Haltech_3E9_Generic_Sensors_9_10: 8 Haltech
+ SG_ TorqueManagementKnob : 63|8@0- (1,0) [0|0] ""  Telemetry
+ SG_ WaterInjectionAdvancedOutputStat : 49|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousStage6OutputState : 50|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousStage5OutputState : 51|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousStage4OutputState : 52|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousStage3OutputState : 53|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousStage2OutputState : 54|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousStage1OutputState : 55|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ TargetLambda : 39|16@0+ (0.001,0.0) [0|0] "lambda"  Telemetry
+ SG_ GenericSensor10 : 23|16@0+ (1,0) [0|0] ""  Telemetry
+ SG_ GenericSensor9 : 7|16@0+ (1,0) [0|0] ""  Telemetry
+
+BO_ 1002 Haltech_3EA_Gearbox_Injection_Cr: 8 Haltech
+ SG_ CrankCasePressure : 55|16@0+ (0.1,-101.3) [0|0] "kPa"  Telemetry
+ SG_ InjectionStage4DutyCycle : 39|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ InjectionStage3DutyCycle : 23|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ GearboxLinePressure : 7|16@0+ (0.1,-101.3) [0|0] "kPa"  Telemetry
+
+BO_ 1003 Haltech_3EB_RaceTimer_IgnitionBa: 8 Haltech
+ SG_ IgnitionAngleBank2 : 55|16@0- (0.1,0.0) [0|0] "deg"  Telemetry
+ SG_ IgnitionAngleBank1 : 39|16@0- (0.1,0.0) [0|0] "deg"  Telemetry
+ SG_ RaceTimer : 7|32@0+ (1,0) [0|0] "ms"  Telemetry
+
+BO_ 1004 Haltech_3EC_TorqueMgmt_Driveshaf: 8 Haltech
+ SG_ TorqueMgmtTimedIgnitionCorrectio : 55|16@0- (0.1,0.0) [0|0] "deg"  Telemetry
+ SG_ TorqueMgmtTargetErrorIgnitionCor : 39|16@0- (0.1,0.0) [0|0] "deg"  Telemetry
+ SG_ TorqueMgmtDriveshaftRPMTargetErr : 23|16@0- (1,0) [0|0] "RPM"  Telemetry
+ SG_ TorqueMgmtDriveshaftRPMTarget : 7|16@0- (1,0) [0|0] "RPM"  Telemetry
+
+BO_ 1005 Haltech_3ED_TorqueMgmt_Combined: 8 Haltech
+ SG_ TorqueMgmtCombinedIgnitionCorrec : 7|16@0- (0.1,0.0) [0|0] "deg"  Telemetry
+
+BO_ 1006 Haltech_3EE_Wideband_5_8: 8 Haltech
+ SG_ WidebandSensor8 : 55|16@0+ (0.001,0.0) [0|0] "lambda"  Telemetry
+ SG_ WidebandSensor7 : 39|16@0+ (0.001,0.0) [0|0] "lambda"  Telemetry
+ SG_ WidebandSensor6 : 23|16@0+ (0.001,0.0) [0|0] "lambda"  Telemetry
+ SG_ WidebandSensor5 : 7|16@0+ (0.001,0.0) [0|0] "lambda"  Telemetry
+
+BO_ 1007 Haltech_3EF_Wideband_9_12: 8 Haltech
+ SG_ WidebandSensor12 : 55|16@0+ (0.001,0.0) [0|0] "lambda"  Telemetry
+ SG_ WidebandSensor11 : 39|16@0+ (0.001,0.0) [0|0] "lambda"  Telemetry
+ SG_ WidebandSensor10 : 23|16@0+ (0.001,0.0) [0|0] "lambda"  Telemetry
+ SG_ WidebandSensor9 : 7|16@0+ (0.001,0.0) [0|0] "lambda"  Telemetry
+
+BO_ 1008 Haltech_3F0_ShockTravel_Uncalibr: 8 Haltech
+ SG_ ShockTravelRearRightUncalibrated : 55|16@0+ (0.1,0.0) [0|0] "mm"  Telemetry
+ SG_ ShockTravelRearLeftUncalibrated : 39|16@0+ (0.1,0.0) [0|0] "mm"  Telemetry
+ SG_ ShockTravelFrontRightUncalibrate : 23|16@0+ (0.1,0.0) [0|0] "mm"  Telemetry
+ SG_ ShockTravelFrontLeftUncalibrated : 7|16@0+ (0.1,0.0) [0|0] "mm"  Telemetry
+
+BO_ 1009 Haltech_3F1_ShockTravel: 8 Haltech
+ SG_ ShockTravelRearRight : 55|16@0- (0.1,0.0) [0|0] "mm"  Telemetry
+ SG_ ShockTravelRearLeft : 39|16@0- (0.1,0.0) [0|0] "mm"  Telemetry
+ SG_ ShockTravelFrontRight : 23|16@0- (0.1,0.0) [0|0] "mm"  Telemetry
+ SG_ ShockTravelFrontLeft : 7|16@0- (0.1,0.0) [0|0] "mm"  Telemetry
+
+BO_ 1010 Haltech_3F2_RideHeight_Front: 8 Haltech
+ SG_ RideHeightFrontDerivative : 39|16@0- (0.1,0.0) [0|0] "mm/s"  Telemetry
+ SG_ RideHeightFrontUncalibrated : 23|16@0- (0.1,0.0) [0|0] "mm"  Telemetry
+ SG_ RideHeightFront : 7|16@0- (0.1,0.0) [0|0] "mm"  Telemetry
+
+BO_ 1011 Haltech_3F3_RideHeight_Rear: 8 Haltech
+ SG_ RideHeightRearDerivative : 39|16@0- (0.1,0.0) [0|0] "mm/s"  Telemetry
+ SG_ RideHeightRearUncalibrated : 23|16@0- (0.1,0.0) [0|0] "mm"  Telemetry
+ SG_ RideHeightRear : 7|16@0- (0.1,0.0) [0|0] "mm"  Telemetry
+
+BO_ 1129 Haltech_469_ECU_Temp_OilLevel: 8 Haltech
+ SG_ OilLevelPercentage : 39|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ ECUTemperature : 7|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+
+BO_ 1136 Haltech_470_Wideband_Overall_Gea: 8 Haltech
+ SG_ Gear : 63|8@0- (1.0,0.0) [0|0] ""  Telemetry
+ SG_ GearSelectorPosition : 55|8@0- (1.0,0.0) [0|0] ""  Telemetry
+ SG_ WidebandBank2 : 39|16@0+ (0.001,0.0) [0|0] "lambda"  Telemetry
+ SG_ WidebandBank1 : 23|16@0+ (0.001,0.0) [0|0] "lambda"  Telemetry
+ SG_ WidebandOverall : 7|16@0+ (0.001,0.0) [0|0] "lambda"  Telemetry
+
+BO_ 1137 Haltech_471_InjPressDiff_APP_Exh: 8 Haltech
+ SG_ ExhaustManifoldPressure : 39|16@0+ (0.1,0.0) [0|0] "kPa"  Telemetry
+ SG_ AcceleratorPedalPosition : 23|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ InjectorPressureDifferential : 7|16@0- (0.1,0.0) [0|0] "kPa"  Telemetry
+
+BO_ 1138 Haltech_472_CruiseControl: 8 Haltech
+ SG_ CruiseControlInputState : 51|12@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ CruiseControlControllerState : 55|4@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ CruiseControlSpeedError : 39|16@0- (0.1,0.0) [0|0] "km/h"  Telemetry
+ SG_ CruiseControlLastTargetSpeed : 23|16@0+ (0.1,0.0) [0|0] "km/h"  Telemetry
+ SG_ CruiseControlTargetSpeed : 7|16@0+ (0.1,0.0) [0|0] "km/h"  Telemetry
+
+BO_ 1139 Haltech_473_FuelUsed_Antilag_Nit: 8 Haltech
+ SG_ CutPercentageMethod : 59|4@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ WaterInjectionAdvancedOverrideOu : 60|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ WaterInjectionAdvancedOverrideSw : 61|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ WaterInjectionAdvancedEnableOutp : 62|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ WaterInjectionAdvancedEnableSwit : 63|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousOverride4OutputState : 48|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousOverride4SwitchState : 49|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousOverride3OutputState : 50|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousOverride3SwitchState : 51|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousOverride2OutputState : 52|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousOverride2SwitchState : 53|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousOverride1OutputState : 54|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousOverride1SwitchState : 55|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousEnable4OutputState : 40|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousEnable4SwitchState : 41|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousEnable3OutputState : 42|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousEnable3SwitchState : 43|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousEnable2OutputState : 44|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousEnable2SwitchState : 45|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousEnable1OutputState : 46|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ NitrousEnable1SwitchState : 47|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ Aux3FuelPumpOutputState : 32|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ Aux2FuelPumpOutputState : 33|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ Aux1FuelPumpOutputState : 34|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ PrimaryFuelPumpOutputState : 35|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ TractionControlSwitchState : 36|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ AntilagOutputState : 37|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ AntilagSwitchState : 38|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ RollingAntilagSwitchState : 39|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ TotalFuelUsed : 7|32@0+ (1,0) [0|0] "cc"  Telemetry
+
+BO_ 1140 Haltech_474_IMU_Vertical_Rates: 8 Haltech
+ SG_ YawRate : 55|16@0- (0.1,0.0) [0|0] "deg/s"  Telemetry
+ SG_ RollRate : 39|16@0- (0.1,0.0) [0|0] "deg/s"  Telemetry
+ SG_ PitchRate : 23|16@0- (0.1,0.0) [0|0] "deg/s"  Telemetry
+ SG_ VerticalG : 7|16@0- (0.1,0.0) [0|0] "m/s2"  Telemetry
+
+BO_ 1141 Haltech_475_FuelPump_Duty: 8 Haltech
+ SG_ Aux3FuelPumpDutyCycle : 55|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ Aux2FuelPumpDutyCycle : 39|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ Aux1FuelPumpDutyCycle : 23|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ PrimaryFuelPumpDutyCycle : 7|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+
+BO_ 1142 Haltech_476_Brake_Rear_Ratios: 8 Haltech
+ SG_ BrakePressureDifference : 55|16@0- (1,0) [0|0] "kPa_abs"  Telemetry
+ SG_ BrakePressureRearRatio : 39|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ BrakePressureFrontRatio : 23|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ BrakePressureRear : 7|16@0+ (1.0,-101.3) [0|0] "kPa"  Telemetry
+
+BO_ 1143 Haltech_477_EngineLimiter: 8 Haltech
+ SG_ RPMLimiterMethod : 59|4@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ EngineLimiterMethod : 63|4@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ CutPercentageFunction : 55|8@0+ (1,0) [0|0] ""  Telemetry
+ SG_ RPMLimiterFunction : 47|8@0+ (1,0) [0|0] ""  Telemetry
+ SG_ EngineLimiterFunction : 39|8@0+ (1,0) [0|0] ""  Telemetry
+ SG_ CutPercentage : 23|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ EngineLimiterMaxRPM : 7|16@0+ (1,0) [0|0] "RPM"  Telemetry
+
+BO_ 1776 Haltech_6F0_Tyre_Pressures: 8 Haltech
+ SG_ RearRightTyrePressure : 55|16@0+ (0.1,-101.3) [0|0] "kPa"  Telemetry
+ SG_ RearLeftTyrePressure : 39|16@0+ (0.1,-101.3) [0|0] "kPa"  Telemetry
+ SG_ FrontRightTyrePressure : 23|16@0+ (0.1,-101.3) [0|0] "kPa"  Telemetry
+ SG_ FrontLeftTyrePressure : 7|16@0+ (0.1,-101.3) [0|0] "kPa"  Telemetry
+
+BO_ 1777 Haltech_6F1_Tyre_Temperatures: 8 Haltech
+ SG_ RearRightTyreTemperature : 55|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ RearLeftTyreTemperature : 39|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ FrontRightTyreTemperature : 23|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ FrontLeftTyreTemperature : 7|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+
+BO_ 1778 Haltech_6F2_Tyre_Sensor_Battery: 8 Haltech
+ SG_ RearRightTyreSensorBatteryVoltag : 55|16@0+ (0.001,0.0) [0|0] "V"  Telemetry
+ SG_ RearLeftTyreSensorBatteryVoltage : 39|16@0+ (0.001,0.0) [0|0] "V"  Telemetry
+ SG_ FrontRightTyreSensorBatteryVolta : 23|16@0+ (0.001,0.0) [0|0] "V"  Telemetry
+ SG_ FrontLeftTyreSensorBatteryVoltag : 7|16@0+ (0.001,0.0) [0|0] "V"  Telemetry
+
+BO_ 1779 Haltech_6F3_Tyre_Recommended_Lea: 8 Haltech
+ SG_ EngineProtectionReason : 55|16@0+ (1,0) [0|0] ""  Telemetry
+ SG_ EngineProtectionSeverityLevel : 47|8@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ FrontLeftTyreAirLeakDetected : 32|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ FrontRightTyreAirLeakDetected : 33|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ RearLeftTyreAirLeakDetected : 34|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ RearRightTyreAirLeakDetected : 35|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ RearTyreRecommendedPressure : 23|16@0+ (0.1,-101.3) [0|0] "kPa"  Telemetry
+ SG_ FrontTyreRecommendedPressure : 7|16@0+ (0.1,-101.3) [0|0] "kPa"  Telemetry
+
+BO_ 1780 Haltech_6F4_Lights_EngineState: 8 Haltech
+ SG_ EngineState : 11|4@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ ParkLightState : 0|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ HeadLightState : 1|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ HighBeamLightState : 2|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ LeftIndicatorState : 3|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ RightIndicatorState : 4|1@0+ (1.0,0.0) [0|0] ""  Telemetry
+
+BO_ 1782 Haltech_6F6_Trip_1: 8 Haltech
+ SG_ TripMeter1 : 39|32@0- (1,0) [0|0] "m"  Telemetry
+ SG_ TotalFuelUsedSinceTrip1Reset : 7|32@0- (1,0) [0|0] "cc"  Telemetry
+
+BO_ 1783 Haltech_6F7_GenericOutputStates_: 8 Haltech
+ SG_ WaterInjectionAdvancedSolenoidDu : 55|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ CalculatedAirTemperature : 39|16@0+ (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ GenericOutputStates : 7|32@0+ (1,0) [0|0] ""  Telemetry
+
+BO_ 1784 Haltech_6F8_Cutout_Motor_Control: 8 Haltech
+ SG_ FuelLevelPercentage0 : 55|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ GenericOpenLoopMotorControl3Stat : 39|8@0- (1,0) [0|0] ""  Telemetry
+ SG_ GenericOpenLoopMotorControl2Stat : 31|8@0- (1,0) [0|0] ""  Telemetry
+ SG_ GenericOpenLoopMotorControl1Stat : 23|8@0- (1,0) [0|0] ""  Telemetry
+ SG_ NitrousBottleOpenerState : 15|8@0- (1,0) [0|0] ""  Telemetry
+ SG_ ExhaustCutoutState : 7|8@0- (1.0,0.0) [0|0] ""  Telemetry
+
+BO_ 1785 Haltech_6F9_FuelLevel_1: 8 Haltech
+ SG_ FuelLevelPercentage1 : 7|16@0+ (0.1,0.0) [0|0] "%"  Telemetry
+
+BO_ 1791 Haltech_6FF_Fluid_Pressures: 8 Haltech
+ SG_ PowerSteeringPressure : 55|16@0- (0.01,-101.3) [0|0] "kPa"  Telemetry
+ SG_ AirConditionerPressure : 39|16@0- (0.1,-101.3) [0|0] "kPa"  Telemetry
+ SG_ TransferCasePressure : 23|16@0- (0.1,-101.3) [0|0] "kPa"  Telemetry
+ SG_ TorqueConverterPressure : 7|16@0- (0.1,-101.3) [0|0] "kPa"  Telemetry
+
+BO_ 1792 Haltech_700_PDM_Multiplexed: 8 Haltech
+ SG_ PDMWord3 : 55|16@0+ (1,0) [0|0] ""  Telemetry
+ SG_ PDMWord2 : 39|16@0+ (1,0) [0|0] ""  Telemetry
+ SG_ PDMWord1 : 23|16@0+ (1,0) [0|0] ""  Telemetry
+ SG_ PDMWord0 : 7|16@0+ (1,0) [0|0] ""  Telemetry
+
+BO_ 1793 Haltech_701_FuelEconomy_AC_Temp: 8 Haltech
+ SG_ FuelConsumptionInstantaneousMile : 55|16@0+ (0.1,0.0) [0|0] "km/L"  Telemetry
+ SG_ AirConditionerTemperature : 39|16@0- (0.1,0.0) [0|0] "K"  Telemetry
+ SG_ FuelConsumptionInstantaneousEcon : 23|16@0+ (0.1,0.0) [0|0] "L/100km"  Telemetry
+ SG_ FuelConsumptionAverageEconomy : 7|16@0+ (0.1,0.0) [0|0] "L/100km"  Telemetry
+
+
+
+
+CM_ "Haltech broadcast CAN protocol v2.0: 1 Mbit/s, 11-bit IDs, big-endian";
+CM_ BU_ Haltech "Haltech Nexus/Elite ECU or VCU";
+CM_ BO_ 867 "Bytes 4-5 unused.";
+CM_ SG_ 875 NOSPressureSensor1 "y = x*11/50 - 101.3; saturates at 14316.4 kPa.";
+CM_ SG_ 880 Gear "Low byte of the manual's \"Combined Gear\" (x & 0xFF).";
+CM_ SG_ 880 GearSelectorPosition "High byte of the manual's \"Combined Gear\" (x >> 8) & 0xFF.";
+CM_ SG_ 994 FuelLevel2 "The manual lists \"Fuel Level\" twice in this message.";
+CM_ SG_ 999 GenericSensor4 "Scaling depends on the configured sensor type (see \"Generic Sensors\" table): raw value shown.";
+CM_ SG_ 999 GenericSensor3 "Scaling depends on the configured sensor type (see \"Generic Sensors\" table): raw value shown.";
+CM_ SG_ 999 GenericSensor2 "Scaling depends on the configured sensor type (see \"Generic Sensors\" table): raw value shown.";
+CM_ SG_ 999 GenericSensor1 "Scaling depends on the configured sensor type (see \"Generic Sensors\" table): raw value shown.";
+CM_ SG_ 1000 GenericSensor8 "Scaling depends on the configured sensor type (see \"Generic Sensors\" table): raw value shown.";
+CM_ SG_ 1000 GenericSensor7 "Scaling depends on the configured sensor type (see \"Generic Sensors\" table): raw value shown.";
+CM_ SG_ 1000 GenericSensor6 "Scaling depends on the configured sensor type (see \"Generic Sensors\" table): raw value shown.";
+CM_ SG_ 1000 GenericSensor5 "Scaling depends on the configured sensor type (see \"Generic Sensors\" table): raw value shown.";
+CM_ SG_ 1001 GenericSensor10 "Scaling depends on the configured sensor type (see \"Generic Sensors\" table): raw value shown.";
+CM_ SG_ 1001 GenericSensor9 "Scaling depends on the configured sensor type (see \"Generic Sensors\" table): raw value shown.";
+CM_ BO_ 1010 "Bytes 6-7 reserved.";
+CM_ SG_ 1010 RideHeightFrontDerivative "Manual gives one x/10 conversion for the whole block.";
+CM_ SG_ 1010 RideHeightFront "Reads 0 if there is an error (No Signal, Calibrating, Device Timeout). Needs Nexus 1.25 / Elite 3.11.";
+CM_ BO_ 1011 "Bytes 6-7 reserved.";
+CM_ SG_ 1011 RideHeightRearDerivative "Manual gives one x/10 conversion for the whole block.";
+CM_ SG_ 1011 RideHeightRear "Reads 0 if there is an error (No Signal, Calibrating, Device Timeout). Needs Nexus 1.25 / Elite 3.11.";
+CM_ SG_ 1138 CruiseControlInputState "Bit-field per manual.";
+CM_ SG_ 1142 BrakePressureDifference "Front minus rear.";
+CM_ SG_ 1143 CutPercentageFunction "Values per the Haltech \"Engine Limiting Functions\" table (not included in the protocol document).";
+CM_ SG_ 1143 RPMLimiterFunction "Values per the Haltech \"Engine Limiting Functions\" table (not included in the protocol document).";
+CM_ SG_ 1143 EngineLimiterFunction "Values per the Haltech \"Engine Limiting Functions\" table (not included in the protocol document).";
+CM_ SG_ 1776 RearRightTyrePressure "0 = error (No Signal, Calibrating or Device Timeout); otherwise converted value.";
+CM_ SG_ 1776 RearLeftTyrePressure "0 = error (No Signal, Calibrating or Device Timeout); otherwise converted value.";
+CM_ SG_ 1776 FrontRightTyrePressure "0 = error (No Signal, Calibrating or Device Timeout); otherwise converted value.";
+CM_ SG_ 1776 FrontLeftTyrePressure "0 = error (No Signal, Calibrating or Device Timeout); otherwise converted value.";
+CM_ SG_ 1777 RearRightTyreTemperature "0 = error (No Signal, Calibrating or Device Timeout); otherwise converted value.";
+CM_ SG_ 1777 RearLeftTyreTemperature "0 = error (No Signal, Calibrating or Device Timeout); otherwise converted value.";
+CM_ SG_ 1777 FrontRightTyreTemperature "0 = error (No Signal, Calibrating or Device Timeout); otherwise converted value.";
+CM_ SG_ 1777 FrontLeftTyreTemperature "0 = error (No Signal, Calibrating or Device Timeout); otherwise converted value.";
+CM_ SG_ 1778 RearRightTyreSensorBatteryVoltag "0 = error (No Signal, Calibrating or Device Timeout); otherwise converted value.";
+CM_ SG_ 1778 RearLeftTyreSensorBatteryVoltage "0 = error (No Signal, Calibrating or Device Timeout); otherwise converted value.";
+CM_ SG_ 1778 FrontRightTyreSensorBatteryVolta "0 = error (No Signal, Calibrating or Device Timeout); otherwise converted value.";
+CM_ SG_ 1778 FrontLeftTyreSensorBatteryVoltag "0 = error (No Signal, Calibrating or Device Timeout); otherwise converted value.";
+CM_ SG_ 1779 EngineProtectionReason "OBDII DTC: upper 2 bits = letter (0 P, 1 B, 2 C, 3 U), remaining 14 bits = code in hex, e.g. 0x2A00 = P2A00.";
+CM_ SG_ 1780 EngineState "Manual writes the range as 1:0-1:3; taken as byte 1 bits 3..0.";
+CM_ SG_ 1783 GenericOutputStates "Bit X = generic output X+1; 1 = on (>=0.1% duty or >=1 Hz).";
+CM_ BO_ 1784 "Byte 5 reserved.";
+CM_ BO_ 1785 "Bytes 2-7 reserved.";
+CM_ SG_ 1791 PowerSteeringPressure "Note x/100 scaling for this channel.";
+CM_ SG_ 1791 TorqueConverterPressure "0 = error (No Signal, Calibrating or Device Timeout); otherwise converted value.";
+CM_ SG_ 1792 PDMWord3 "HBO/HCO8/HCO25 data for the internal R5 PDM; see Haltech \"Multiplexed CAN protocol\".";
+CM_ SG_ 1792 PDMWord2 "HBO/HCO8/HCO25 data for the internal R5 PDM; see Haltech \"Multiplexed CAN protocol\".";
+CM_ SG_ 1792 PDMWord1 "HBO/HCO8/HCO25 data for the internal R5 PDM; see Haltech \"Multiplexed CAN protocol\".";
+CM_ SG_ 1792 PDMWord0 "HBO/HCO8/HCO25 data for the internal R5 PDM; see Haltech \"Multiplexed CAN protocol\".";
+CM_ SG_ 1793 FuelConsumptionInstantaneousMile "Manual gives bytes \"5 - 6\", which overlaps the previous signal; taken as bytes 6-7.";
+BA_DEF_ BO_  "SystemMessageLongSymbol" STRING ;
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_  "Baudrate" INT 0 10485760;
+BA_DEF_DEF_  "SystemMessageLongSymbol" "";
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "Baudrate" 125000;
+BA_ "Baudrate" 1000000;
+BA_ "GenMsgCycleTime" BO_ 864 20;
+BA_ "GenMsgCycleTime" BO_ 865 20;
+BA_ "SystemMessageLongSymbol" BO_ 866 "Haltech_362_Engine_Injection_Ignition";
+BA_ "GenMsgCycleTime" BO_ 866 20;
+BA_ "GenMsgCycleTime" BO_ 867 50;
+BA_ "GenMsgCycleTime" BO_ 868 20;
+BA_ "GenMsgCycleTime" BO_ 872 50;
+BA_ "GenMsgCycleTime" BO_ 873 50;
+BA_ "GenMsgCycleTime" BO_ 874 50;
+BA_ "GenMsgCycleTime" BO_ 875 50;
+BA_ "GenMsgCycleTime" BO_ 876 50;
+BA_ "GenMsgCycleTime" BO_ 877 50;
+BA_ "SystemMessageLongSymbol" BO_ 878 "Haltech_36E_Limiting_Launch_LongG";
+BA_ "GenMsgCycleTime" BO_ 878 50;
+BA_ "GenMsgCycleTime" BO_ 879 50;
+BA_ "SystemMessageLongSymbol" BO_ 880 "Haltech_370_VehicleSpeed_Gear_Cams";
+BA_ "GenMsgCycleTime" BO_ 880 50;
+BA_ "GenMsgCycleTime" BO_ 881 100;
+BA_ "GenMsgCycleTime" BO_ 882 100;
+BA_ "GenMsgCycleTime" BO_ 883 100;
+BA_ "GenMsgCycleTime" BO_ 884 100;
+BA_ "GenMsgCycleTime" BO_ 885 100;
+BA_ "GenMsgCycleTime" BO_ 886 100;
+BA_ "GenMsgCycleTime" BO_ 887 20;
+BA_ "SystemMessageLongSymbol" BO_ 896 "Haltech_380_Generic_Output_Values";
+BA_ "GenMsgCycleTime" BO_ 896 100;
+BA_ "GenMsgCycleTime" BO_ 992 200;
+BA_ "GenMsgCycleTime" BO_ 993 200;
+BA_ "GenMsgCycleTime" BO_ 994 200;
+BA_ "GenMsgCycleTime" BO_ 995 200;
+BA_ "SystemMessageLongSymbol" BO_ 996 "Haltech_3E4_Switches_Lights_Trims";
+BA_ "GenMsgCycleTime" BO_ 996 200;
+BA_ "SystemMessageLongSymbol" BO_ 997 "Haltech_3E5_Ignition_PitLimiter_ABS_Steering";
+BA_ "GenMsgCycleTime" BO_ 997 20;
+BA_ "GenMsgCycleTime" BO_ 998 50;
+BA_ "GenMsgCycleTime" BO_ 999 50;
+BA_ "GenMsgCycleTime" BO_ 1000 50;
+BA_ "SystemMessageLongSymbol" BO_ 1001 "Haltech_3E9_Generic_Sensors_9_10_Lambda_Nitrous";
+BA_ "GenMsgCycleTime" BO_ 1001 50;
+BA_ "SystemSignalLongSymbol" SG_ 1001 WaterInjectionAdvancedOutputStat "WaterInjectionAdvancedOutputState";
+BA_ "SystemMessageLongSymbol" BO_ 1002 "Haltech_3EA_Gearbox_Injection_Crankcase";
+BA_ "GenMsgCycleTime" BO_ 1002 20;
+BA_ "SystemMessageLongSymbol" BO_ 1003 "Haltech_3EB_RaceTimer_IgnitionBanks";
+BA_ "GenMsgCycleTime" BO_ 1003 20;
+BA_ "SystemMessageLongSymbol" BO_ 1004 "Haltech_3EC_TorqueMgmt_Driveshaft";
+BA_ "GenMsgCycleTime" BO_ 1004 20;
+BA_ "SystemSignalLongSymbol" SG_ 1004 TorqueMgmtTimedIgnitionCorrectio "TorqueMgmtTimedIgnitionCorrection";
+BA_ "SystemSignalLongSymbol" SG_ 1004 TorqueMgmtTargetErrorIgnitionCor "TorqueMgmtTargetErrorIgnitionCorrection";
+BA_ "SystemSignalLongSymbol" SG_ 1004 TorqueMgmtDriveshaftRPMTargetErr "TorqueMgmtDriveshaftRPMTargetError";
+BA_ "GenMsgCycleTime" BO_ 1005 20;
+BA_ "SystemSignalLongSymbol" SG_ 1005 TorqueMgmtCombinedIgnitionCorrec "TorqueMgmtCombinedIgnitionCorrection";
+BA_ "GenMsgCycleTime" BO_ 1006 50;
+BA_ "GenMsgCycleTime" BO_ 1007 50;
+BA_ "SystemMessageLongSymbol" BO_ 1008 "Haltech_3F0_ShockTravel_Uncalibrated";
+BA_ "GenMsgCycleTime" BO_ 1008 20;
+BA_ "SystemSignalLongSymbol" SG_ 1008 ShockTravelFrontRightUncalibrate "ShockTravelFrontRightUncalibrated";
+BA_ "GenMsgCycleTime" BO_ 1009 20;
+BA_ "GenMsgCycleTime" BO_ 1010 50;
+BA_ "GenMsgCycleTime" BO_ 1011 50;
+BA_ "GenMsgCycleTime" BO_ 1129 200;
+BA_ "SystemMessageLongSymbol" BO_ 1136 "Haltech_470_Wideband_Overall_Gear";
+BA_ "GenMsgCycleTime" BO_ 1136 50;
+BA_ "SystemMessageLongSymbol" BO_ 1137 "Haltech_471_InjPressDiff_APP_ExhMAP";
+BA_ "GenMsgCycleTime" BO_ 1137 20;
+BA_ "GenMsgCycleTime" BO_ 1138 50;
+BA_ "SystemMessageLongSymbol" BO_ 1139 "Haltech_473_FuelUsed_Antilag_Nitrous_Pumps";
+BA_ "GenMsgCycleTime" BO_ 1139 100;
+BA_ "SystemSignalLongSymbol" SG_ 1139 WaterInjectionAdvancedOverrideOu "WaterInjectionAdvancedOverrideOutputState";
+BA_ "SystemSignalLongSymbol" SG_ 1139 WaterInjectionAdvancedOverrideSw "WaterInjectionAdvancedOverrideSwitchState";
+BA_ "SystemSignalLongSymbol" SG_ 1139 WaterInjectionAdvancedEnableOutp "WaterInjectionAdvancedEnableOutputState";
+BA_ "SystemSignalLongSymbol" SG_ 1139 WaterInjectionAdvancedEnableSwit "WaterInjectionAdvancedEnableSwitchState";
+BA_ "GenMsgCycleTime" BO_ 1140 50;
+BA_ "GenMsgCycleTime" BO_ 1141 200;
+BA_ "GenMsgCycleTime" BO_ 1142 50;
+BA_ "GenMsgCycleTime" BO_ 1143 100;
+BA_ "GenMsgCycleTime" BO_ 1776 200;
+BA_ "GenMsgCycleTime" BO_ 1777 200;
+BA_ "GenMsgCycleTime" BO_ 1778 200;
+BA_ "SystemSignalLongSymbol" SG_ 1778 RearRightTyreSensorBatteryVoltag "RearRightTyreSensorBatteryVoltage";
+BA_ "SystemSignalLongSymbol" SG_ 1778 FrontRightTyreSensorBatteryVolta "FrontRightTyreSensorBatteryVoltage";
+BA_ "SystemSignalLongSymbol" SG_ 1778 FrontLeftTyreSensorBatteryVoltag "FrontLeftTyreSensorBatteryVoltage";
+BA_ "SystemMessageLongSymbol" BO_ 1779 "Haltech_6F3_Tyre_Recommended_Leaks_Protection";
+BA_ "GenMsgCycleTime" BO_ 1779 200;
+BA_ "GenMsgCycleTime" BO_ 1780 10;
+BA_ "GenMsgCycleTime" BO_ 1782 200;
+BA_ "SystemMessageLongSymbol" BO_ 1783 "Haltech_6F7_GenericOutputStates_CalcAirTemp";
+BA_ "GenMsgCycleTime" BO_ 1783 100;
+BA_ "SystemSignalLongSymbol" SG_ 1783 WaterInjectionAdvancedSolenoidDu "WaterInjectionAdvancedSolenoidDutyCycle";
+BA_ "SystemMessageLongSymbol" BO_ 1784 "Haltech_6F8_Cutout_Motor_Control_FuelLevel";
+BA_ "GenMsgCycleTime" BO_ 1784 200;
+BA_ "SystemSignalLongSymbol" SG_ 1784 GenericOpenLoopMotorControl3Stat "GenericOpenLoopMotorControl3State";
+BA_ "SystemSignalLongSymbol" SG_ 1784 GenericOpenLoopMotorControl2Stat "GenericOpenLoopMotorControl2State";
+BA_ "SystemSignalLongSymbol" SG_ 1784 GenericOpenLoopMotorControl1Stat "GenericOpenLoopMotorControl1State";
+BA_ "GenMsgCycleTime" BO_ 1785 200;
+BA_ "GenMsgCycleTime" BO_ 1791 50;
+BA_ "GenMsgCycleTime" BO_ 1792 20;
+BA_ "GenMsgCycleTime" BO_ 1793 50;
+BA_ "SystemSignalLongSymbol" SG_ 1793 FuelConsumptionInstantaneousMile "FuelConsumptionInstantaneousMileage";
+BA_ "SystemSignalLongSymbol" SG_ 1793 FuelConsumptionInstantaneousEcon "FuelConsumptionInstantaneousEconomy";
+VAL_ 878 EngineLimitingActive 0 "Off" 1 "On" ;
+VAL_ 880 Gear 1 "1" 2 "2" 3 "3" 4 "4" 5 "5" 6 "6" 7 "7" 8 "8" 9 "9" 10 "10" 0 "Neutral" -1 "Reverse" -2 "Park" -3 "Unknown" -4 "Drive" -5 "Sport" -6 "Manual" -7 "Low" -8 "Overdrive" ;
+VAL_ 880 GearSelectorPosition 1 "1" 2 "2" 3 "3" 4 "4" 5 "5" 6 "6" 7 "7" 8 "8" 9 "9" 10 "10" 0 "Neutral" -1 "Reverse" -2 "Park" -3 "Unknown" -4 "Drive" -5 "Sport" -6 "Manual" -7 "Low" -8 "Overdrive" ;
+VAL_ 996 TractionControlLight 0 "Off" 1 "On" ;
+VAL_ 996 HandBrakeState 0 "Off" 1 "On" ;
+VAL_ 996 BatteryLightActive 0 "Off" 1 "On" ;
+VAL_ 996 CheckEngineLight 0 "Off" 1 "On" ;
+VAL_ 996 ThermoFan1On 0 "Off" 1 "On" ;
+VAL_ 996 ThermoFan2On 0 "Off" 1 "On" ;
+VAL_ 996 ThermoFan3On 0 "Off" 1 "On" ;
+VAL_ 996 ThermoFan4On 0 "Off" 1 "On" ;
+VAL_ 996 AirConOutput 0 "Off" 1 "On" ;
+VAL_ 996 AirConRequest 0 "Off" 1 "On" ;
+VAL_ 996 TractionControlActive 0 "Off" 1 "On" ;
+VAL_ 996 TractionControlEnabled 0 "Off" 1 "On" ;
+VAL_ 996 TorqueReductionActive 0 "Off" 1 "On" ;
+VAL_ 996 ClutchPressureSensor 0 "Off" 1 "On" ;
+VAL_ 996 FlatShiftSwitch 0 "Off" 1 "On" ;
+VAL_ 996 BrakeFluidLevelSwitch 0 "Off" 1 "On" ;
+VAL_ 996 AuxRPMLimiterActive 0 "Off" 1 "On" ;
+VAL_ 996 LaunchControlSwitch 0 "Off" 1 "On" ;
+VAL_ 996 LaunchControlActive 0 "Off" 1 "On" ;
+VAL_ 996 OilPressureLight 0 "Off" 1 "On" ;
+VAL_ 996 ClutchSwitch 0 "Off" 1 "On" ;
+VAL_ 996 BrakePedalSwitch 0 "Off" 1 "On" ;
+VAL_ 996 TransientThrottleActive 0 "Off" 1 "On" ;
+VAL_ 996 DecelCutActive 0 "Off" 1 "On" ;
+VAL_ 996 GearSwitch 0 "Off" 1 "On" ;
+VAL_ 996 ReverseSwitch 0 "Off" 1 "On" ;
+VAL_ 996 NeutralSwitch 0 "Off" 1 "On" ;
+VAL_ 997 ABSArmed 0 "Off" 1 "On" ;
+VAL_ 997 ABSActive 0 "Off" 1 "On" ;
+VAL_ 997 ABSError 0 "Off" 1 "On" ;
+VAL_ 997 PitLaneSpeedLimiterSwitchState 0 "Off" 1 "On" ;
+VAL_ 997 PitLaneSpeedLimiterActive 0 "Off" 1 "On" ;
+VAL_ 997 PitLaneSpeedLimiterError 0 "Off" 1 "On" ;
+VAL_ 997 IgnitionSwitch 0 "Off" 1 "On" ;
+VAL_ 1001 WaterInjectionAdvancedOutputStat 0 "Off" 1 "On" ;
+VAL_ 1001 NitrousStage6OutputState 0 "Off" 1 "On" ;
+VAL_ 1001 NitrousStage5OutputState 0 "Off" 1 "On" ;
+VAL_ 1001 NitrousStage4OutputState 0 "Off" 1 "On" ;
+VAL_ 1001 NitrousStage3OutputState 0 "Off" 1 "On" ;
+VAL_ 1001 NitrousStage2OutputState 0 "Off" 1 "On" ;
+VAL_ 1001 NitrousStage1OutputState 0 "Off" 1 "On" ;
+VAL_ 1136 Gear 1 "1" 2 "2" 3 "3" 4 "4" 5 "5" 6 "6" 7 "7" 8 "8" 9 "9" 10 "10" 0 "Neutral" -1 "Reverse" -2 "Park" -3 "Unknown" -4 "Drive" -5 "Sport" -6 "Manual" -7 "Low" -8 "Overdrive" ;
+VAL_ 1136 GearSelectorPosition 1 "1" 2 "2" 3 "3" 4 "4" 5 "5" 6 "6" 7 "7" 8 "8" 9 "9" 10 "10" 0 "Neutral" -1 "Reverse" -2 "Park" -3 "Unknown" -4 "Drive" -5 "Sport" -6 "Manual" -7 "Low" -8 "Overdrive" ;
+VAL_ 1138 CruiseControlInputState 0 "Unused" 1 "Disable" 2 "Enable" 3 "Enable/Disable" 4 "Cancel" 8 "Set" 12 "Set/Cancel" 16 "Resume" 20 "Resume/Cancel" 32 "Accel" 64 "Decel" 76 "Set/Coast/Cancel" 84 "Resume/Coast/Cancel" 128 "Increment" 168 "Set/Accel/+" 176 "Resume/Accel/+" 256 "Decrement" 328 "Set/Coast/-" 336 "Resume/Coast/-" 512 "Rest Position" ;
+VAL_ 1138 CruiseControlControllerState 0 "Disabled" 1 "Inactive" 2 "Cruising" 3 "Accelerating" 4 "Decelerating" 5 "Cancelling" 6 "Disabling" ;
+VAL_ 1139 CutPercentageMethod 0 "No Cut" 1 "Fuel" 2 "Ignition" 3 "Fuel and Ignition" ;
+VAL_ 1139 WaterInjectionAdvancedOverrideOu 0 "Off" 1 "On" ;
+VAL_ 1139 WaterInjectionAdvancedOverrideSw 0 "Off" 1 "On" ;
+VAL_ 1139 WaterInjectionAdvancedEnableOutp 0 "Off" 1 "On" ;
+VAL_ 1139 WaterInjectionAdvancedEnableSwit 0 "Off" 1 "On" ;
+VAL_ 1139 NitrousOverride4OutputState 0 "Off" 1 "On" ;
+VAL_ 1139 NitrousOverride4SwitchState 0 "Off" 1 "On" ;
+VAL_ 1139 NitrousOverride3OutputState 0 "Off" 1 "On" ;
+VAL_ 1139 NitrousOverride3SwitchState 0 "Off" 1 "On" ;
+VAL_ 1139 NitrousOverride2OutputState 0 "Off" 1 "On" ;
+VAL_ 1139 NitrousOverride2SwitchState 0 "Off" 1 "On" ;
+VAL_ 1139 NitrousOverride1OutputState 0 "Off" 1 "On" ;
+VAL_ 1139 NitrousOverride1SwitchState 0 "Off" 1 "On" ;
+VAL_ 1139 NitrousEnable4OutputState 0 "Off" 1 "On" ;
+VAL_ 1139 NitrousEnable4SwitchState 0 "Off" 1 "On" ;
+VAL_ 1139 NitrousEnable3OutputState 0 "Off" 1 "On" ;
+VAL_ 1139 NitrousEnable3SwitchState 0 "Off" 1 "On" ;
+VAL_ 1139 NitrousEnable2OutputState 0 "Off" 1 "On" ;
+VAL_ 1139 NitrousEnable2SwitchState 0 "Off" 1 "On" ;
+VAL_ 1139 NitrousEnable1OutputState 0 "Off" 1 "On" ;
+VAL_ 1139 NitrousEnable1SwitchState 0 "Off" 1 "On" ;
+VAL_ 1139 Aux3FuelPumpOutputState 0 "Off" 1 "On" ;
+VAL_ 1139 Aux2FuelPumpOutputState 0 "Off" 1 "On" ;
+VAL_ 1139 Aux1FuelPumpOutputState 0 "Off" 1 "On" ;
+VAL_ 1139 PrimaryFuelPumpOutputState 0 "Off" 1 "On" ;
+VAL_ 1139 TractionControlSwitchState 0 "Off" 1 "On" ;
+VAL_ 1139 AntilagOutputState 0 "Off" 1 "On" ;
+VAL_ 1139 AntilagSwitchState 0 "Off" 1 "On" ;
+VAL_ 1139 RollingAntilagSwitchState 0 "Off" 1 "On" ;
+VAL_ 1143 RPMLimiterMethod 0 "No Cut" 1 "Fuel" 2 "Ignition" 3 "Fuel and Ignition" ;
+VAL_ 1143 EngineLimiterMethod 0 "No Cut" 1 "Fuel" 2 "Ignition" 3 "Fuel and Ignition" ;
+VAL_ 1779 EngineProtectionSeverityLevel 0 "Idle" 1 "Level 1" 2 "Level 2" 3 "Level 3" ;
+VAL_ 1779 FrontLeftTyreAirLeakDetected 0 "Off" 1 "On" ;
+VAL_ 1779 FrontRightTyreAirLeakDetected 0 "Off" 1 "On" ;
+VAL_ 1779 RearLeftTyreAirLeakDetected 0 "Off" 1 "On" ;
+VAL_ 1779 RearRightTyreAirLeakDetected 0 "Off" 1 "On" ;
+VAL_ 1780 EngineState 0 "Stopped" 1 "Cranking" 2 "Idling" 3 "Running" 4 "Limiting" ;
+VAL_ 1780 ParkLightState 0 "Off" 1 "On" ;
+VAL_ 1780 HeadLightState 0 "Off" 1 "On" ;
+VAL_ 1780 HighBeamLightState 0 "Off" 1 "On" ;
+VAL_ 1780 LeftIndicatorState 0 "Off" 1 "On" ;
+VAL_ 1780 RightIndicatorState 0 "Off" 1 "On" ;
+VAL_ 1784 ExhaustCutoutState -1 "Input Error" 0 "Disabled" 1 "Closed" 2 "Opening" 3 "Open" 4 "Closing" 5 "Paused Part Way" ;
+
+
+

@@ -1,0 +1,100 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: PDU1 VCU Telemetry
+
+
+BO_ 2148140560 PDU1_Status_Ch1_4: 8 PDU1
+ SG_ PDMMeasuredCurrent04 : 49|10@0+ (0.1,0.0) [0|102.3] "A"  Telemetry
+ SG_ PDMErrorStatus04 : 55|3@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ PDMMeasuredCurrent03 : 33|10@0+ (0.1,0.0) [0|102.3] "A"  Telemetry
+ SG_ PDMErrorStatus03 : 39|3@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ PDMMeasuredCurrent02 : 17|10@0+ (0.1,0.0) [0|102.3] "A"  Telemetry
+ SG_ PDMErrorStatus02 : 23|3@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ PDMMeasuredCurrent01 : 1|10@0+ (0.1,0.0) [0|102.3] "A"  Telemetry
+ SG_ PDMErrorStatus01 : 7|3@0+ (1.0,0.0) [0|0] ""  Telemetry
+
+BO_ 2148140561 PDU1_Status_Ch5_8: 8 PDU1
+ SG_ PDMMeasuredCurrent08 : 49|10@0+ (0.1,0.0) [0|102.3] "A"  Telemetry
+ SG_ PDMErrorStatus08 : 55|3@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ PDMMeasuredCurrent07 : 33|10@0+ (0.1,0.0) [0|102.3] "A"  Telemetry
+ SG_ PDMErrorStatus07 : 39|3@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ PDMMeasuredCurrent06 : 17|10@0+ (0.1,0.0) [0|102.3] "A"  Telemetry
+ SG_ PDMErrorStatus06 : 23|3@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ PDMMeasuredCurrent05 : 1|10@0+ (0.1,0.0) [0|102.3] "A"  Telemetry
+ SG_ PDMErrorStatus05 : 7|3@0+ (1.0,0.0) [0|0] ""  Telemetry
+
+BO_ 2148140576 PDU1_Cmd_MaxCurrent: 8 VCU
+ SG_ PDMMaxCurrent08 : 63|8@0+ (0.4,0.0) [0|102] "A"  PDU1
+ SG_ PDMMaxCurrent07 : 55|8@0+ (0.4,0.0) [0|102] "A"  PDU1
+ SG_ PDMMaxCurrent06 : 47|8@0+ (0.4,0.0) [0|102] "A"  PDU1
+ SG_ PDMMaxCurrent05 : 39|8@0+ (0.4,0.0) [0|102] "A"  PDU1
+ SG_ PDMMaxCurrent04 : 31|8@0+ (0.4,0.0) [0|102] "A"  PDU1
+ SG_ PDMMaxCurrent03 : 23|8@0+ (0.4,0.0) [0|102] "A"  PDU1
+ SG_ PDMMaxCurrent02 : 15|8@0+ (0.4,0.0) [0|102] "A"  PDU1
+ SG_ PDMMaxCurrent01 : 7|8@0+ (0.4,0.0) [0|102] "A"  PDU1
+
+BO_ 2148140592 PDU1_Cmd_DutyCycle: 8 VCU
+ SG_ PDMDutyOut08 : 63|8@0+ (0.392157,0.0) [0|100] "%"  PDU1
+ SG_ PDMDutyOut07 : 55|8@0+ (0.392157,0.0) [0|100] "%"  PDU1
+ SG_ PDMDutyOut06 : 47|8@0+ (0.392157,0.0) [0|100] "%"  PDU1
+ SG_ PDMDutyOut05 : 39|8@0+ (0.392157,0.0) [0|100] "%"  PDU1
+ SG_ PDMDutyOut04 : 31|8@0+ (0.392157,0.0) [0|100] "%"  PDU1
+ SG_ PDMDutyOut03 : 23|8@0+ (0.392157,0.0) [0|100] "%"  PDU1
+ SG_ PDMDutyOut02 : 15|8@0+ (0.392157,0.0) [0|100] "%"  PDU1
+ SG_ PDMDutyOut01 : 7|8@0+ (0.392157,0.0) [0|100] "%"  PDU1
+
+
+
+
+CM_ BO_ 2148140560 "PDU-8 unit 1 Tx message 1, 20 Hz. Currents below ~2 A are unreliable (per manual).";
+CM_ BO_ 2148140561 "PDU-8 unit 1 Tx message 2, 20 Hz.";
+CM_ BO_ 2148140576 "0 = output off; non-zero = current limit. PDU switches all outputs off if not updated within 500 ms.";
+CM_ BO_ 2148140592 "255 = no PWM (simple on/off) for that channel. Must update within 500 ms.";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_ "GenMsgCycleTime" BO_ 2148140560 50;
+BA_ "GenMsgCycleTime" BO_ 2148140561 50;
+VAL_ 2148140560 PDMErrorStatus04 0 "OK" 1 "Open Circuit" 2 "Current Limit Exceeded" 4 "Short Circuit" ;
+VAL_ 2148140560 PDMErrorStatus03 0 "OK" 1 "Open Circuit" 2 "Current Limit Exceeded" 4 "Short Circuit" ;
+VAL_ 2148140560 PDMErrorStatus02 0 "OK" 1 "Open Circuit" 2 "Current Limit Exceeded" 4 "Short Circuit" ;
+VAL_ 2148140560 PDMErrorStatus01 0 "OK" 1 "Open Circuit" 2 "Current Limit Exceeded" 4 "Short Circuit" ;
+VAL_ 2148140561 PDMErrorStatus08 0 "OK" 1 "Open Circuit" 2 "Current Limit Exceeded" 4 "Short Circuit" ;
+VAL_ 2148140561 PDMErrorStatus07 0 "OK" 1 "Open Circuit" 2 "Current Limit Exceeded" 4 "Short Circuit" ;
+VAL_ 2148140561 PDMErrorStatus06 0 "OK" 1 "Open Circuit" 2 "Current Limit Exceeded" 4 "Short Circuit" ;
+VAL_ 2148140561 PDMErrorStatus05 0 "OK" 1 "Open Circuit" 2 "Current Limit Exceeded" 4 "Short Circuit" ;
+
+
+

@@ -1,0 +1,380 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU Telemetry INV_FL INV_FR INV_RL INV_RR
+
+
+BO_ 1025 INV_FL_General1_ERPM_Duty_Vin: 8 INV_FL
+ SG_ InputVoltage : 55|16@0- (1,0) [0|0] "V"  Telemetry
+ SG_ Duty : 39|16@0- (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ ERPM : 7|32@0- (1,0) [0|0] "ERPM"  Telemetry
+
+BO_ 1057 INV_FL_General2_ACcur_DCcur: 8 INV_FL
+ SG_ DCCurrent : 23|16@0- (0.1,0.0) [0|0] "A"  Telemetry
+ SG_ ACCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  Telemetry
+
+BO_ 1089 INV_FL_General3_Temps_Fault: 8 INV_FL
+ SG_ FaultCode : 39|8@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ MotorTemp : 23|16@0- (0.1,0.0) [0|0] "degC"  Telemetry
+ SG_ ControllerTemp : 7|16@0- (0.1,0.0) [0|0] "degC"  Telemetry
+
+BO_ 1121 INV_FL_General4_Id_Iq: 8 INV_FL
+ SG_ Iq : 39|32@0- (0.01,0.0) [0|0] "A"  Telemetry
+ SG_ Id : 7|32@0- (0.01,0.0) [0|0] "A"  Telemetry
+
+BO_ 1153 INV_FL_General5_IO_Limits: 8 INV_FL
+ SG_ CANMapVersion : 63|8@0+ (1,0) [0|0] ""  Telemetry
+ SG_ RPMMinLimit : 40|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ RPMMaxLimit : 41|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ PowerLimit : 42|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ CapacitorTempLimit : 32|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DCCurrentLimit : 33|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DriveEnableLimit : 34|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ IGBTAccelTempLimit : 35|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ IGBTTempLimit : 36|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ InputVoltageLimit : 37|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ MotorAccelTempLimit : 38|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ MotorTempLimit : 39|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DriveEnable : 24|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalInput1 : 16|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalInput2 : 17|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalInput3 : 18|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalInput4 : 19|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalOutput1 : 20|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalOutput2 : 21|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalOutput3 : 22|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalOutput4 : 23|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ BrakeSignal : 15|8@0- (1,0) [0|0] "%"  Telemetry
+ SG_ ThrottleSignal : 7|8@0- (1,0) [0|0] "%"  Telemetry
+
+BO_ 33 INV_FL_Cmd_SetACCurrent: 8 VCU
+ SG_ ACCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_FL
+
+BO_ 65 INV_FL_Cmd_SetBrakeCurrent: 8 VCU
+ SG_ BrakeCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_FL
+
+BO_ 97 INV_FL_Cmd_SetERPM: 8 VCU
+ SG_ TargetERPM : 7|32@0- (1,0) [0|0] "ERPM"  INV_FL
+
+BO_ 129 INV_FL_Cmd_SetPosition: 8 VCU
+ SG_ TargetPosition : 7|16@0- (0.1,0.0) [0|0] "deg"  INV_FL
+
+BO_ 161 INV_FL_Cmd_SetRelativeCurrent: 8 VCU
+ SG_ RelativeACCurrent : 7|16@0- (0.1,0.0) [0|0] "%"  INV_FL
+
+BO_ 193 INV_FL_Cmd_SetRelBrakeCurrent: 8 VCU
+ SG_ RelativeBrakeCurrent : 7|16@0- (0.1,0.0) [0|0] "%"  INV_FL
+
+BO_ 225 INV_FL_Cmd_SetDigitalOutput: 8 VCU
+ SG_ DigitalOutput1 : 0|1@0+ (1,0) [0|0] ""  INV_FL
+ SG_ DigitalOutput2 : 1|1@0+ (1,0) [0|0] ""  INV_FL
+ SG_ DigitalOutput3 : 2|1@0+ (1,0) [0|0] ""  INV_FL
+ SG_ DigitalOutput4 : 3|1@0+ (1,0) [0|0] ""  INV_FL
+
+BO_ 257 INV_FL_Cmd_SetMaxACCurrent: 8 VCU
+ SG_ MaxACCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_FL
+
+BO_ 289 INV_FL_Cmd_SetMaxACBrake: 8 VCU
+ SG_ MaxACBrakeCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_FL
+
+BO_ 321 INV_FL_Cmd_SetMaxDCCurrent: 8 VCU
+ SG_ MaxDCCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_FL
+
+BO_ 353 INV_FL_Cmd_SetMaxDCBrake: 8 VCU
+ SG_ MaxDCBrakeCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_FL
+
+BO_ 385 INV_FL_Cmd_DriveEnable: 8 VCU
+ SG_ DriveEnable : 7|8@0+ (1,0) [0|0] ""  INV_FL
+
+BO_ 1026 INV_FR_General1_ERPM_Duty_Vin: 8 INV_FR
+ SG_ InputVoltage : 55|16@0- (1,0) [0|0] "V"  Telemetry
+ SG_ Duty : 39|16@0- (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ ERPM : 7|32@0- (1,0) [0|0] "ERPM"  Telemetry
+
+BO_ 1058 INV_FR_General2_ACcur_DCcur: 8 INV_FR
+ SG_ DCCurrent : 23|16@0- (0.1,0.0) [0|0] "A"  Telemetry
+ SG_ ACCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  Telemetry
+
+BO_ 1090 INV_FR_General3_Temps_Fault: 8 INV_FR
+ SG_ FaultCode : 39|8@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ MotorTemp : 23|16@0- (0.1,0.0) [0|0] "degC"  Telemetry
+ SG_ ControllerTemp : 7|16@0- (0.1,0.0) [0|0] "degC"  Telemetry
+
+BO_ 1122 INV_FR_General4_Id_Iq: 8 INV_FR
+ SG_ Iq : 39|32@0- (0.01,0.0) [0|0] "A"  Telemetry
+ SG_ Id : 7|32@0- (0.01,0.0) [0|0] "A"  Telemetry
+
+BO_ 1154 INV_FR_General5_IO_Limits: 8 INV_FR
+ SG_ CANMapVersion : 63|8@0+ (1,0) [0|0] ""  Telemetry
+ SG_ RPMMinLimit : 40|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ RPMMaxLimit : 41|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ PowerLimit : 42|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ CapacitorTempLimit : 32|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DCCurrentLimit : 33|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DriveEnableLimit : 34|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ IGBTAccelTempLimit : 35|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ IGBTTempLimit : 36|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ InputVoltageLimit : 37|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ MotorAccelTempLimit : 38|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ MotorTempLimit : 39|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DriveEnable : 24|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalInput1 : 16|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalInput2 : 17|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalInput3 : 18|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalInput4 : 19|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalOutput1 : 20|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalOutput2 : 21|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalOutput3 : 22|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalOutput4 : 23|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ BrakeSignal : 15|8@0- (1,0) [0|0] "%"  Telemetry
+ SG_ ThrottleSignal : 7|8@0- (1,0) [0|0] "%"  Telemetry
+
+BO_ 34 INV_FR_Cmd_SetACCurrent: 8 VCU
+ SG_ ACCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_FR
+
+BO_ 66 INV_FR_Cmd_SetBrakeCurrent: 8 VCU
+ SG_ BrakeCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_FR
+
+BO_ 98 INV_FR_Cmd_SetERPM: 8 VCU
+ SG_ TargetERPM : 7|32@0- (1,0) [0|0] "ERPM"  INV_FR
+
+BO_ 130 INV_FR_Cmd_SetPosition: 8 VCU
+ SG_ TargetPosition : 7|16@0- (0.1,0.0) [0|0] "deg"  INV_FR
+
+BO_ 162 INV_FR_Cmd_SetRelativeCurrent: 8 VCU
+ SG_ RelativeACCurrent : 7|16@0- (0.1,0.0) [0|0] "%"  INV_FR
+
+BO_ 194 INV_FR_Cmd_SetRelBrakeCurrent: 8 VCU
+ SG_ RelativeBrakeCurrent : 7|16@0- (0.1,0.0) [0|0] "%"  INV_FR
+
+BO_ 226 INV_FR_Cmd_SetDigitalOutput: 8 VCU
+ SG_ DigitalOutput1 : 0|1@0+ (1,0) [0|0] ""  INV_FR
+ SG_ DigitalOutput2 : 1|1@0+ (1,0) [0|0] ""  INV_FR
+ SG_ DigitalOutput3 : 2|1@0+ (1,0) [0|0] ""  INV_FR
+ SG_ DigitalOutput4 : 3|1@0+ (1,0) [0|0] ""  INV_FR
+
+BO_ 258 INV_FR_Cmd_SetMaxACCurrent: 8 VCU
+ SG_ MaxACCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_FR
+
+BO_ 290 INV_FR_Cmd_SetMaxACBrake: 8 VCU
+ SG_ MaxACBrakeCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_FR
+
+BO_ 322 INV_FR_Cmd_SetMaxDCCurrent: 8 VCU
+ SG_ MaxDCCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_FR
+
+BO_ 354 INV_FR_Cmd_SetMaxDCBrake: 8 VCU
+ SG_ MaxDCBrakeCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_FR
+
+BO_ 386 INV_FR_Cmd_DriveEnable: 8 VCU
+ SG_ DriveEnable : 7|8@0+ (1,0) [0|0] ""  INV_FR
+
+BO_ 1027 INV_RL_General1_ERPM_Duty_Vin: 8 INV_RL
+ SG_ InputVoltage : 55|16@0- (1,0) [0|0] "V"  Telemetry
+ SG_ Duty : 39|16@0- (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ ERPM : 7|32@0- (1,0) [0|0] "ERPM"  Telemetry
+
+BO_ 1059 INV_RL_General2_ACcur_DCcur: 8 INV_RL
+ SG_ DCCurrent : 23|16@0- (0.1,0.0) [0|0] "A"  Telemetry
+ SG_ ACCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  Telemetry
+
+BO_ 1091 INV_RL_General3_Temps_Fault: 8 INV_RL
+ SG_ FaultCode : 39|8@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ MotorTemp : 23|16@0- (0.1,0.0) [0|0] "degC"  Telemetry
+ SG_ ControllerTemp : 7|16@0- (0.1,0.0) [0|0] "degC"  Telemetry
+
+BO_ 1123 INV_RL_General4_Id_Iq: 8 INV_RL
+ SG_ Iq : 39|32@0- (0.01,0.0) [0|0] "A"  Telemetry
+ SG_ Id : 7|32@0- (0.01,0.0) [0|0] "A"  Telemetry
+
+BO_ 1155 INV_RL_General5_IO_Limits: 8 INV_RL
+ SG_ CANMapVersion : 63|8@0+ (1,0) [0|0] ""  Telemetry
+ SG_ RPMMinLimit : 40|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ RPMMaxLimit : 41|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ PowerLimit : 42|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ CapacitorTempLimit : 32|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DCCurrentLimit : 33|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DriveEnableLimit : 34|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ IGBTAccelTempLimit : 35|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ IGBTTempLimit : 36|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ InputVoltageLimit : 37|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ MotorAccelTempLimit : 38|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ MotorTempLimit : 39|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DriveEnable : 24|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalInput1 : 16|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalInput2 : 17|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalInput3 : 18|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalInput4 : 19|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalOutput1 : 20|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalOutput2 : 21|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalOutput3 : 22|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalOutput4 : 23|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ BrakeSignal : 15|8@0- (1,0) [0|0] "%"  Telemetry
+ SG_ ThrottleSignal : 7|8@0- (1,0) [0|0] "%"  Telemetry
+
+BO_ 35 INV_RL_Cmd_SetACCurrent: 8 VCU
+ SG_ ACCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_RL
+
+BO_ 67 INV_RL_Cmd_SetBrakeCurrent: 8 VCU
+ SG_ BrakeCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_RL
+
+BO_ 99 INV_RL_Cmd_SetERPM: 8 VCU
+ SG_ TargetERPM : 7|32@0- (1,0) [0|0] "ERPM"  INV_RL
+
+BO_ 131 INV_RL_Cmd_SetPosition: 8 VCU
+ SG_ TargetPosition : 7|16@0- (0.1,0.0) [0|0] "deg"  INV_RL
+
+BO_ 163 INV_RL_Cmd_SetRelativeCurrent: 8 VCU
+ SG_ RelativeACCurrent : 7|16@0- (0.1,0.0) [0|0] "%"  INV_RL
+
+BO_ 195 INV_RL_Cmd_SetRelBrakeCurrent: 8 VCU
+ SG_ RelativeBrakeCurrent : 7|16@0- (0.1,0.0) [0|0] "%"  INV_RL
+
+BO_ 227 INV_RL_Cmd_SetDigitalOutput: 8 VCU
+ SG_ DigitalOutput1 : 0|1@0+ (1,0) [0|0] ""  INV_RL
+ SG_ DigitalOutput2 : 1|1@0+ (1,0) [0|0] ""  INV_RL
+ SG_ DigitalOutput3 : 2|1@0+ (1,0) [0|0] ""  INV_RL
+ SG_ DigitalOutput4 : 3|1@0+ (1,0) [0|0] ""  INV_RL
+
+BO_ 259 INV_RL_Cmd_SetMaxACCurrent: 8 VCU
+ SG_ MaxACCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_RL
+
+BO_ 291 INV_RL_Cmd_SetMaxACBrake: 8 VCU
+ SG_ MaxACBrakeCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_RL
+
+BO_ 323 INV_RL_Cmd_SetMaxDCCurrent: 8 VCU
+ SG_ MaxDCCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_RL
+
+BO_ 355 INV_RL_Cmd_SetMaxDCBrake: 8 VCU
+ SG_ MaxDCBrakeCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_RL
+
+BO_ 387 INV_RL_Cmd_DriveEnable: 8 VCU
+ SG_ DriveEnable : 7|8@0+ (1,0) [0|0] ""  INV_RL
+
+BO_ 1028 INV_RR_General1_ERPM_Duty_Vin: 8 INV_RR
+ SG_ InputVoltage : 55|16@0- (1,0) [0|0] "V"  Telemetry
+ SG_ Duty : 39|16@0- (0.1,0.0) [0|0] "%"  Telemetry
+ SG_ ERPM : 7|32@0- (1,0) [0|0] "ERPM"  Telemetry
+
+BO_ 1060 INV_RR_General2_ACcur_DCcur: 8 INV_RR
+ SG_ DCCurrent : 23|16@0- (0.1,0.0) [0|0] "A"  Telemetry
+ SG_ ACCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  Telemetry
+
+BO_ 1092 INV_RR_General3_Temps_Fault: 8 INV_RR
+ SG_ FaultCode : 39|8@0+ (1.0,0.0) [0|0] ""  Telemetry
+ SG_ MotorTemp : 23|16@0- (0.1,0.0) [0|0] "degC"  Telemetry
+ SG_ ControllerTemp : 7|16@0- (0.1,0.0) [0|0] "degC"  Telemetry
+
+BO_ 1124 INV_RR_General4_Id_Iq: 8 INV_RR
+ SG_ Iq : 39|32@0- (0.01,0.0) [0|0] "A"  Telemetry
+ SG_ Id : 7|32@0- (0.01,0.0) [0|0] "A"  Telemetry
+
+BO_ 1156 INV_RR_General5_IO_Limits: 8 INV_RR
+ SG_ CANMapVersion : 63|8@0+ (1,0) [0|0] ""  Telemetry
+ SG_ RPMMinLimit : 40|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ RPMMaxLimit : 41|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ PowerLimit : 42|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ CapacitorTempLimit : 32|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DCCurrentLimit : 33|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DriveEnableLimit : 34|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ IGBTAccelTempLimit : 35|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ IGBTTempLimit : 36|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ InputVoltageLimit : 37|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ MotorAccelTempLimit : 38|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ MotorTempLimit : 39|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DriveEnable : 24|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalInput1 : 16|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalInput2 : 17|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalInput3 : 18|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalInput4 : 19|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalOutput1 : 20|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalOutput2 : 21|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalOutput3 : 22|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ DigitalOutput4 : 23|1@0+ (1,0) [0|0] ""  Telemetry
+ SG_ BrakeSignal : 15|8@0- (1,0) [0|0] "%"  Telemetry
+ SG_ ThrottleSignal : 7|8@0- (1,0) [0|0] "%"  Telemetry
+
+BO_ 36 INV_RR_Cmd_SetACCurrent: 8 VCU
+ SG_ ACCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_RR
+
+BO_ 68 INV_RR_Cmd_SetBrakeCurrent: 8 VCU
+ SG_ BrakeCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_RR
+
+BO_ 100 INV_RR_Cmd_SetERPM: 8 VCU
+ SG_ TargetERPM : 7|32@0- (1,0) [0|0] "ERPM"  INV_RR
+
+BO_ 132 INV_RR_Cmd_SetPosition: 8 VCU
+ SG_ TargetPosition : 7|16@0- (0.1,0.0) [0|0] "deg"  INV_RR
+
+BO_ 164 INV_RR_Cmd_SetRelativeCurrent: 8 VCU
+ SG_ RelativeACCurrent : 7|16@0- (0.1,0.0) [0|0] "%"  INV_RR
+
+BO_ 196 INV_RR_Cmd_SetRelBrakeCurrent: 8 VCU
+ SG_ RelativeBrakeCurrent : 7|16@0- (0.1,0.0) [0|0] "%"  INV_RR
+
+BO_ 228 INV_RR_Cmd_SetDigitalOutput: 8 VCU
+ SG_ DigitalOutput1 : 0|1@0+ (1,0) [0|0] ""  INV_RR
+ SG_ DigitalOutput2 : 1|1@0+ (1,0) [0|0] ""  INV_RR
+ SG_ DigitalOutput3 : 2|1@0+ (1,0) [0|0] ""  INV_RR
+ SG_ DigitalOutput4 : 3|1@0+ (1,0) [0|0] ""  INV_RR
+
+BO_ 260 INV_RR_Cmd_SetMaxACCurrent: 8 VCU
+ SG_ MaxACCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_RR
+
+BO_ 292 INV_RR_Cmd_SetMaxACBrake: 8 VCU
+ SG_ MaxACBrakeCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_RR
+
+BO_ 324 INV_RR_Cmd_SetMaxDCCurrent: 8 VCU
+ SG_ MaxDCCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_RR
+
+BO_ 356 INV_RR_Cmd_SetMaxDCBrake: 8 VCU
+ SG_ MaxDCBrakeCurrent : 7|16@0- (0.1,0.0) [0|0] "A"  INV_RR
+
+BO_ 388 INV_RR_Cmd_DriveEnable: 8 VCU
+ SG_ DriveEnable : 7|8@0+ (1,0) [0|0] ""  INV_RR
+
+
+
+
+
+
+
+
+VAL_ 1089 FaultCode 0 "NO FAULTS" 1 "Overvoltage" 2 "Undervoltage" 3 "DRV" 4 "ABS Overcurrent" 5 "CTLR Overtemp" 6 "Motor Overtemp" 7 "Sensor wire fault" 8 "Sensor general fault" 9 "CAN Command error" 10 "Analog input error" ;
+VAL_ 1090 FaultCode 0 "NO FAULTS" 1 "Overvoltage" 2 "Undervoltage" 3 "DRV" 4 "ABS Overcurrent" 5 "CTLR Overtemp" 6 "Motor Overtemp" 7 "Sensor wire fault" 8 "Sensor general fault" 9 "CAN Command error" 10 "Analog input error" ;
+VAL_ 1091 FaultCode 0 "NO FAULTS" 1 "Overvoltage" 2 "Undervoltage" 3 "DRV" 4 "ABS Overcurrent" 5 "CTLR Overtemp" 6 "Motor Overtemp" 7 "Sensor wire fault" 8 "Sensor general fault" 9 "CAN Command error" 10 "Analog input error" ;
+VAL_ 1092 FaultCode 0 "NO FAULTS" 1 "Overvoltage" 2 "Undervoltage" 3 "DRV" 4 "ABS Overcurrent" 5 "CTLR Overtemp" 6 "Motor Overtemp" 7 "Sensor wire fault" 8 "Sensor general fault" 9 "CAN Command error" 10 "Analog input error" ;
+
+
+
