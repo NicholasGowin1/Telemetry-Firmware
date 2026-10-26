@@ -1,0 +1,38 @@
+# Build output
+build/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# C/C++ build artifacts
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.out
+
+# CMake (in-source build leftovers)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CMakeUserPresets.json
+.cmake/
+
+# Cellular test output
+test_sw
+CAN_Write.can
+
+# macOS
+.DS_Store
+*.dSYM/
+
+# IDE/editor
+.vscode/
+.idea/
